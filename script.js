@@ -42,6 +42,9 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log('Сумма элементов массива ' + sumNumArray);
 
+// 2 вариант решения
+console.log(arrRandom.reduce((sum, nextNum) => nextNum + sum, 0));
+
 // 2. Найти минимальное число
 let minNumArray = arrRandom[0];
 for (let i = 1; i < arrRandom.length; i++) {
@@ -62,3 +65,6 @@ function searchNum(argArray, argNum) {
     return resultText + argNum;
 }
 console.log(searchNum(arrRandom, 3));
+
+// 2 вариант решения
+console.log(arrRandom.some(item => item === 3))
